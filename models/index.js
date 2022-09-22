@@ -1,3 +1,3 @@
 module.exports = {
-    Recipedia: require("./Recipedia.js")
+    Recipe: require("./Recipe.js")
 }
