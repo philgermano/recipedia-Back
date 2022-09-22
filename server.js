@@ -32,7 +32,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 /* == Routes == */
-app.use("/holidays", routes.recepedia)
+app.use("/recipes", routes.recipes)
 
 app.listen(PORT, () => {
   console.log('🍽', 'Time to cook on port', PORT, '🍴',)
