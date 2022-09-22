@@ -1,6 +1,7 @@
 /* == External Modules == */
 const express = require('express')
 const cors = require('cors')
+require('dotenv').config();
 // whitelist & corsOptions
 const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']
 const corsOptions = {
@@ -20,7 +21,7 @@ const routes = require('./routes')
 const app = express()
 
 /* == Port == */
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 
 /* == DB connection == */
 require('./config/db.connection')
@@ -32,7 +33,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 /* == Routes == */
-app.use("/holidays", routes.recepedia)
+app.use("/recipes", routes.recipes)
 
 app.listen(PORT, () => {
   console.log('🍽', 'Time to cook on port', PORT, '🍴',)
