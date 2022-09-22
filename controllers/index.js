@@ -1,3 +1,3 @@
 module.exports = {
-	Recipes: require('./recipes.ctrls.js')
+	recipes: require('./recipes.ctrls.js')
 }
