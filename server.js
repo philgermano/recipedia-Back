@@ -1,8 +1,9 @@
 /* == External Modules == */
 const express = require('express')
 const cors = require('cors')
+require('dotenv').config()
 // whitelist & corsOptions
-const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']
+// const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
