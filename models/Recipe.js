@@ -11,15 +11,28 @@ const recipeSchema = new mongoose.Schema({
             url: {
             type: String
           },
-            servings: {
-            type: Number
-          },
+          //Make sure this works. Adding multiple objects. does it spawn objects or do we need to list more objects. If not hard we should concatonate the parts into one instructions.  
             ingredients: [{ 
                 name: {type: String},
-                qty: { type: Number},
-                measure:{type:Number}
+                measure:{type: String}
             }],
-            instructions: { type: String}
+            instructions: { 
+              type: String
+            },
+            Tags: {
+              type: String
+            },
+            video: {
+              type: String
+            },
+            style: {
+              type: String
+            },
+            catagory: {
+              type: String
+            }
+
+            
 });
 
 const Recipe = mongoose.model('Recipe', recipeSchema)
