@@ -1,7 +1,6 @@
 /* == External Modules == */
 const express = require('express')
 const cors = require('cors')
-<<<<<<< HEAD
 require('dotenv').config();
 
 //whitelist & corsOptions
@@ -16,19 +15,6 @@ const corsOptions = {
     }
     */
    callback(null, true)
-=======
-require('dotenv').config()
-// whitelist & corsOptions
-const whitelist = ['http://localhost:3000', '*']
-const corsOptions = {
-  origin: function (origin, callback) {
-    // if (whitelist.indexOf(origin) !== -1) {
-    //   callback(null, true)
-    // } else {
-    //   callback(new Error('Not allowed by CORS'))
-    // }
-    callback(null, true)
->>>>>>> aa4ac3838f450b8b8b7a62b0cc219edb0f667679
   }
 }
 
