@@ -14,7 +14,8 @@ const recipeSchema = new mongoose.Schema({
           //Make sure this works. Adding multiple objects. does it spawn objects or do we need to list more objects. If not hard we should concatonate the parts into one instructions.  
             ingredients: [{ 
                 name: {type: String},
-                measure:{type: String}
+                measure:{type: String},
+                inStock: {type: Boolean} 
             }],
             instructions: { 
               type: String
