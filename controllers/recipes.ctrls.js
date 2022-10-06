@@ -11,12 +11,26 @@ const index = (req, res) => {
   });
 };
 
+const search = (req, res) => {
+  db.Recipe.findById(req.params.id, (error, recipe) => {
+    console.log(req.params.id)
+
+    if(error) return res.status(400).json({ error: error.message });
+
+    return res.status(200).json({
+      recipe
+    });
+  })
+  };
+
+
 const create = (req, res) => {
   db.Recipe.create(req.body, (error, createdRecipe) => {
     if(error) return res.status(400).json({ error: error.message });
 
     return res.status(200).json(createdRecipe); //  .json() will send proper headers in response so client knows it's json coming back
   });
+  
 };
 
 const destroy = (req, res) => {
@@ -49,4 +63,5 @@ module.exports = {
     create,
     destroy,
     update,
+    search
 }

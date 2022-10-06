@@ -8,5 +8,6 @@ router.get("/", ctrls.recipes.index)
 router.post("/", ctrls.recipes.create)
 router.delete("/:id", ctrls.recipes.destroy)
 router.put("/:id", ctrls.recipes.update)
+router.get("/:id", ctrls.recipes.search )
 
 module.exports = router;
